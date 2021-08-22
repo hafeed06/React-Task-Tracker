@@ -4,6 +4,7 @@ import AddTask from './compenents/AddTask';
 import { useState } from 'react';
 
 const App = () => {
+  const [showAddTask, setShowAddTask] = useState(false)
   const maincontainer = {
     width: "80%",
     border: 'solid 2px #0378A2',
@@ -61,8 +62,8 @@ const App = () => {
   return (
     <div className="App">
       <div style={maincontainer}>
-      <Header user="Hafeed" school="epita" />
-      <AddTask onAdd={addTask}/>
+      <Header user="Hafeed" school="epita" onAdd= {() => setShowAddTask(!showAddTask)} />
+      {showAddTask && <AddTask onAdd={addTask}/>}
       {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={onToggle}/> : 'There are no tasks'}
       </div>
     </div>
