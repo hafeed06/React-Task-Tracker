@@ -38,13 +38,4 @@
       "last 1 safari version"
     ]
   },
-  "presets": [
-    "@babel/preset-env"
-  ],
-  "devDependencies": {
-    "@babel/core": "^7.15.0",
-    "@babel/preset-env": "^7.15.0",
-    "babel-loader": "^8.1.0",
-    "webpack": "^4.44.2"
-  }
 }
